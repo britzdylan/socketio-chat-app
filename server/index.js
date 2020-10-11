@@ -4,13 +4,15 @@ import logger from "morgan";
 import cors from "cors";
 
 // routes
-import indexRouter from "./routes/index.js";
-import userRouter from "./routes/user.js";
-import chatRoomRouter from "./routes/chatRoom.js";
-import deleteRouter from "./routes/delete.js";
+import indexRouter from "../routes/index.js";
+import userRouter from "../routes/users.js";
+import chatRoomRouter from "../routes/chatRoom.js";
+import deleteRouter from "../routes/delete.js";
 
 // middlewares
-import { decode } from './middlewares/jwt.js'
+import { decode } from '../middlewares/jwt.js'
+
+import "../config/index.js";
 
 const app = express();
 
